@@ -1,35 +1,66 @@
 <!DOCTYPE html>
-<html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>صفحه سفارش</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- <label class="switch">
+<html dir="rtl" lang="fa">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>صفحه سفارش</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- <label class="switch">
 			<input type="checkbox" />
 			<span class="slider round"></span>
 		</label> -->
-    <div class="container">
-      <p class="left">گالوانیزه</p>
-      <input type="checkbox" id="switch" class="checkbox" />
-      <label for="switch" class="toggle"></label>
-      <p>رنگی</p>
-    </div>
-    <div class="funnel">
-      <label class="funnel_label">
-        <input type="checkbox" class="funnel_checkbox" checked />short
-      </label>
+		<div class="container">
+			<p class="left">گالوانیزه</p>
+			<input type="checkbox" id="switch" class="checkbox" />
+			<label for="switch" class="toggle"></label>
+			<p>رنگی</p>
+		</div>
+		<div class="funnel">
+			<label class="funnel_label">
+				<input
+					id="checkbox1"
+					type="checkbox"
+					class="funnel_checkbox"
+					checked
+					onclick="myFunc('checkbox1')"
+				/>قیف کوتاه
+			</label>
 
-      <label class="funnel_label">
-        <input type="checkbox" class="funnel_checkbox" />long
-      </label>
+			<label class="funnel_label">
+				<input
+					id="checkbox2"
+					type="checkbox"
+					class="funnel_checkbox"
+					onclick="myFunc('checkbox2')"
+				/>
+				قیف بلند
+			</label>
 
-      <label class="funnel_label">
-        <input type="checkbox" class="funnel_checkbox" />enclosed
-      </label>
-    </div>
-  </body>
+			<label class="funnel_label">
+				<input
+					id="checkbox3"
+					type="checkbox"
+					class="funnel_checkbox"
+					onclick="myFunc('checkbox3')"
+				/>قیف ته بسته
+			</label>
+		</div>
+
+		<div class="quantity-box">
+			<p>تعداد:</p>
+			<!-- <button class="quantity-btn" id="minus-btn">-</button> -->
+			<svg class="quantity-btn">
+				<use href="./sprite.svg#icon-minus"></use>
+			</svg>
+			<input type="text" class="quantity-input" value="1" />
+			<!-- <button class="quantity-btn" id="plus-btn">+</button> -->
+			<svg class="quantity-btn">
+				<use href="./sprite.svg#icon-plus"></use>
+			</svg>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
