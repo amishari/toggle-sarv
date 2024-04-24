@@ -52,78 +52,156 @@ input:checked + .slider::before {
 
 /* toggle in label designing */
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2rem, min-content));
-  justify-items: center;
-  align-items: center;
-  column-gap: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(2rem, min-content));
+	justify-items: center;
+	align-items: center;
+	column-gap: 0.5rem;
 }
 .toggle {
-  position: relative;
-  display: inline-block;
-  width: 2.5rem;
-  height: 1.25rem;
-  background-color: rgb(198, 200, 201); /*Chromium*/
-  border-radius: 30px;
-  border: 1px solid grey;
-  justify-items: center;
-  align-items: center;
+	position: relative;
+	display: inline-block;
+	width: 2.5rem;
+	height: 1.25rem;
+	background-color: rgb(198, 200, 201); /*Chromium*/
+	border-radius: 30px;
+	border: 1px solid grey;
+	justify-items: center;
+	align-items: center;
 }
 
 /* After slide changes */
 .toggle::after {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #fff;
-  top: 0.06rem;
-  left: 0.1rem;
-  transition: all 0.5s;
-  border: 1px solid gray;
+	content: "";
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: #fff;
+	top: 0.06rem;
+	left: 0.1rem;
+	transition: all 0.5s;
+	border: 1px solid gray;
 }
 .toggle:hover {
-  border: 2px solid rgb(110, 41, 101);
+	border: 2px solid rgb(110, 41, 101);
 }
 /* Toggle text */
 p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  justify-self: left;
-  font-size: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	justify-self: left;
+	font-size: 1rem;
 }
 .left {
-  justify-self: end;
+	justify-self: end;
 }
 
 /* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-  left: 1.3rem;
+	left: 1.3rem;
 }
 
 /* Checkbox checked toggle label bg color */
 .checkbox:checked + .toggle {
-  background-color: rgb(0, 0, 128); /*navy blue*/
+	background-color: rgb(0, 0, 128); /*navy blue*/
 }
 
 /* Checkbox vanished */
 .checkbox {
-  display: none;
+	display: none;
 }
 .funnel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2rem, max-content));
-  justify-items: center;
-  align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(2rem, max-content));
+	justify-items: center;
+	align-items: center;
 }
 .funnel_checkbox {
-  padding: 0.5rem;
-  accent-color: rebeccapurple;
-  border-radius: 50%;
+	padding: 0.5rem;
+	accent-color: rebeccapurple;
 }
 
 .funnel_label {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+	font-family: cursive;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+.qty {
+	display: inline-flex;
+}
+.qty input {
+	width: 75%;
+	border: 3px solid #24becc;
+	color: #3f037b;
+	border-radius: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.qty input:hover,
+.qty input:active,
+.qty input:focus {
+	animation: color-change 2s linear infinite;
+}
+
+@keyframes color-change {
+	0%,
+	100% {
+		border-color: #f3389c;
+	}
+
+	25% {
+		border-color: #7d64fc;
+	}
+
+	50% {
+		border-color: #0d3b66;
+	}
+
+	75% {
+		/* border-color: #3f037b; */
+		border-color: gold;
+	}
+}
+.quantity-box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(2rem, 3rem));
+	grid-template-rows: 2rem;
+	column-gap: 0.3rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	justify-items: center;
+	align-items: center;
+}
+
+.quantity-btn {
+	background-color: inherit;
+	border: none;
+	/* padding: 5px 10px; */
+	cursor: pointer;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	font-family: inherit;
+}
+.quantity-btn:hover {
+	background-color: #7d64fc;
+}
+
+.quantity-input {
+	width: 70%;
+	text-align: center;
+	border-radius: 0.5rem;
+	justify-self: center;
+}
+.quantity-input:hover,
+.quantity-input:active,
+.quantity-input:focus {
+	animation: color-change 2s linear infinite;
+}
+.quantity-box p {
+	justify-self: center;
+	/* margin-left: 1rem; */
 }
