@@ -51,6 +51,9 @@ input:checked + .slider::before {
 } */
 
 /* toggle in label designing */
+.root {
+	--color-secondary: #101d2c;
+}
 .container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(2rem, min-content));
@@ -170,7 +173,7 @@ p {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(2rem, 3rem));
 	grid-template-rows: 2rem;
-	column-gap: 0.3rem;
+	column-gap: 0.2rem;
 	font-size: 1.5rem;
 	font-weight: 500;
 	justify-items: center;
@@ -178,17 +181,17 @@ p {
 }
 
 .quantity-btn {
-	background-color: inherit;
-	border: none;
+	fill: #f33851;
 	/* padding: 5px 10px; */
 	cursor: pointer;
-	border-radius: 0.5rem;
-	font-size: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
 	font-family: inherit;
+	justify-self: left;
 }
-.quantity-btn:hover {
+/* .quantity-btn:hover {
 	background-color: #7d64fc;
-}
+} */
 
 .quantity-input {
 	width: 70%;
@@ -205,3 +208,11 @@ p {
 	justify-self: center;
 	/* margin-left: 1rem; */
 }
+.left {
+	fill: green;
+	justify-self: right;
+}
+/* .test {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+		url(./Map_of_USA_showing_state_names.png);
+} */
